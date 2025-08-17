@@ -5,6 +5,7 @@ import com.ahsan.repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
+import java.util.UUID;
 
 public class TaskService
 {
@@ -15,6 +16,7 @@ public class TaskService
 
     public Task saveTask(Task task)
     {
+        task.setTaskId(UUID.randomUUID().toString().split("-")[0]);
         return repository.save(task);
     }
 
