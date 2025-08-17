@@ -57,4 +57,12 @@ public class TaskService
         return "TaskId : " + taskId + " got successfully deleted!";
 
     }
+
+
+    //--------------- Custom MongoDB-Queries:
+
+    public List<Task> getTaskByAssigneeAndPriority(String assignee, String priority)
+    {
+        return repository.findByAssigneeAndPriority(assignee,priority);
+    }
 }

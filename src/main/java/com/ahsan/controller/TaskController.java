@@ -51,4 +51,11 @@ public class TaskController
         return "TaskId : " + taskId + " got successfully deleted!";
 
     }
+
+
+    @GetMapping("/assignee-priority/{assignee}/{priority}")
+    public List<Task> getTaskByAssigneeAndPriority(@PathVariable String assignee,@PathVariable String priority)
+    {
+        return taskService.getTaskByAssigneeAndPriority(assignee,priority);
+    }
 }
