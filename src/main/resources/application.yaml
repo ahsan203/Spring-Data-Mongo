@@ -5,3 +5,6 @@ spring:
       port: 27017
       database: SpringMongoDB
 
+
+server:
+  port: 62695
