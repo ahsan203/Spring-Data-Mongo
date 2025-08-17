@@ -36,8 +36,8 @@ public class TaskController
     }
 
 
-    @PutMapping()
-    public Task updateTask(@RequestBody  Task task)
+    @PutMapping
+    public Task updateTask(@RequestBody Task task)
     {
         return taskService.updateTask(task);
     }

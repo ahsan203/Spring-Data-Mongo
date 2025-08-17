@@ -1,5 +1,6 @@
 package com.ahsan.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,6 +16,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 public class Task
 {
     @Id
+    @JsonProperty("tid")
     private String taskId;
     private String description;
     private String priority; //--- P1, P2, P3
